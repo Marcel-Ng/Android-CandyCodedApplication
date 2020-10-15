@@ -37,6 +37,7 @@ public class InfoActivity extends AppCompatActivity {
         if(mapIntent.resolveActivity(getPackageManager()) == null){
             startActivity(mapIntent);
         }
+        startActivity(mapIntent);
 
     }
 
