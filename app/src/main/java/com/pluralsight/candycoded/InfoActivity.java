@@ -37,11 +37,17 @@ public class InfoActivity extends AppCompatActivity {
         if(mapIntent.resolveActivity(getPackageManager()) == null){
             startActivity(mapIntent);
         }
-        startActivity(mapIntent);
+        startActivity(mapIntent);//may actually remove this line of code later
 
     }
 
     // ***
     // TODO - Task 3 - Launch the Phone Activity
     // ***
+
+    public void createPhoneIntent(View view){
+        Intent intent = new Intent(Intent.ACTION_DIAL);
+        intent.setData(Uri.parse( "tel:0123456789"));
+        startActivity(intent);
+    }
 }
